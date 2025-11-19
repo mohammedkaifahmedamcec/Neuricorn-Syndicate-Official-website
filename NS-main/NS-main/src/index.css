@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg: #0A0A0A;
+    --color-gold: #FFD700;
+  }
+}
+
+body {
+  background: radial-gradient(ellipse at center, #0b0b0b 0%, #000 100%);
+  color-scheme: dark;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #FFD700 0%, #FFEF99 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .neural-border {
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .neural-border:hover {
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  }
+
+  .neural-pulse {
+    animation: neuralPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes neuralPulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.4));
+    }
+    50% {
+      filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.7));
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+html{
+  font-size: 16px;
+}
