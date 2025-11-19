@@ -13,21 +13,21 @@ function App() {
     <Router>
       <div className="relative min-h-screen overflow-hidden">
         <div className="app">
-           <div className="fixed inset-0 -z-10">
+          <div className="fixed inset-0 -z-10">
             <NeuralBackground />
-           </div>
-        <Header />
-        <main className="relative z-10">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/careers" element={<Careers />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+          </div>
+          <Header />
+          <main className="relative z-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/careers" element={<Careers />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </div>
     </Router>
   );
